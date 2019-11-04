@@ -6,25 +6,23 @@ using System.Web.Mvc;
 
 namespace WebBanHang.Controllers
 {
-    public class PageController : Controller
+    public class ProductController : Controller
     {
+      
+  
+
         public ActionResult Index()
         {
+       
             return View();
         }
-        
-        public ActionResult GioiThieu()
+
+        public ActionResult ProductDetail(int id)
         {
-            ViewBag.Message = "Trang giới thiệu";
+            ViewBag.Message = "Chi tiết sản phẩm";
 
             return View();
         }
 
-        public ActionResult LienHe()
-        {
-            ViewBag.Message = "Trang liên hệ";
-
-            return View();
-        }
     }
 }
