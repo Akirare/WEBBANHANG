@@ -131,10 +131,22 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\QuanLyBanHang.mdf" />
+    <Content Include="App_Data\QuanLyBanHang_log.ldf">
+      <DependentUpon>QuanLyBanHang.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\icon-1.png" />
+    <Content Include="Content\Images\icon-2.png" />
+    <Content Include="Content\Images\icon-3.png" />
+    <Content Include="Content\Images\marketing-1.png" />
+    <Content Include="Content\Images\marketing-2.png" />
+    <Content Include="Content\Images\slider-1.jpg" />
+    <Content Include="Content\Images\slider-2.jpg" />
+    <Content Include="Content\Images\slider-3.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -173,9 +185,15 @@
     <Content Include="Views\Search\Index.cshtml" />
     <Content Include="Views\Order\GioHang.cshtml" />
     <Content Include="Views\Order\Checkout.cshtml" />
+    <Content Include="Views\Shared\_HeaderNavBar.cshtml" />
+    <Content Include="Views\Shared\Includes\_Footer.cshtml" />
+    <Content Include="Views\Page\_HomeSlider.cshtml" />
+    <Content Include="Views\Page\_HomeMarketing.cshtml" />
+    <Content Include="Views\Page\DangNhap.cshtml" />
+    <Content Include="Views\Page\DangKy.cshtml" />
+    <Content Include="Views\Page\ChinhSach.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

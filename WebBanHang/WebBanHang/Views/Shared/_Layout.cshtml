@@ -8,36 +8,16 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Page", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-
-                    <li>@Html.ActionLink("Trang chủ", "Index")</li>
-                    <li>@Html.RouteLink("Giới thiệu", "Page.gioi_thieu")</li>
-                    <li>@Html.RouteLink("Liên hệ", "Page.lien_he")</li>
-                    <li>@Html.RouteLink("Đăng nhập", "Account.dang_nhap")</li>
-                    <li>@Html.RouteLink("Đăng ký", "Account.dang_ky")</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
+    @Html.Partial("_HeaderNavBar")
+    
+    <main role="main" style="margin-top:80px">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
-
+       
+    </main>
+    <!-- Footer-->
+    @Html.Partial("~/Views/Shared/Includes/_Footer.cshtml")
+    <!--End footer-->
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)

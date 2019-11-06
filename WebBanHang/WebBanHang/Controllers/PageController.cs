@@ -26,5 +26,21 @@ namespace WebBanHang.Controllers
 
             return View();
         }
+ 
+
+        public ActionResult DangNhap()
+        {
+            return View();
+        }
+
+        public ActionResult DangKy()
+        {
+            return View();
+        }
+
+        public ActionResult ChinhSach()
+        {
+            return View();
+        }
     }
 }

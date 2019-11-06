@@ -13,7 +13,11 @@ namespace WebBanHang
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            
+            routes.MapRoute(
+              name: "Page.trang_chu",
+              url: "",
+              defaults: new { controller = "Page", action = "Index" }
+          );
 
             routes.MapRoute(
                name: "Page.gioi_thieu",
@@ -26,6 +30,21 @@ namespace WebBanHang
                url: "lien-he",
                defaults: new { controller = "Page", action = "LienHe" }
            );
+            routes.MapRoute(
+              name: "Page.dang_ky",
+              url: "dang-ky",
+              defaults: new { controller = "Page", action = "DangKy" }
+          );
+            routes.MapRoute(
+                name: "page.dang_nhap",
+                url: "dang-nhap",
+                defaults: new { controller = "Page", action = "DangNhap" }
+            );
+            routes.MapRoute(
+              name: "Page.chinh_sach",
+              url: "chinh-sach",
+              defaults: new { controller = "Page", action = "ChinhSach" }
+          );
 
             routes.MapRoute(
             name: "Account.dang_nhap",
@@ -38,6 +57,8 @@ namespace WebBanHang
             url: "dang-ky",
             defaults: new { controller = "Account", action = "DangKy" }
         );
+
+  
 
             routes.MapRoute(
                 name: "Default",
