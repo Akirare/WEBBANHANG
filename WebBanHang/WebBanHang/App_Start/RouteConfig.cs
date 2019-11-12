@@ -36,7 +36,7 @@ namespace WebBanHang
               defaults: new { controller = "Page", action = "DangKy" }
           );
             routes.MapRoute(
-                name: "page.dang_nhap",
+                name: "Page.dang_nhap",
                 url: "dang-nhap",
                 defaults: new { controller = "Page", action = "DangNhap" }
             );
