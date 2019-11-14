@@ -2,21 +2,57 @@
     ViewBag.Title = "Home Page";
 }
 
-@*<div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-        <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-    </div>
+@using WebBanHang.EFF;
 
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>*@
 <!--Home Slider-->
 @Html.Partial("_HomeSlider")
 <!--Home Marketing-->
 @Html.Partial("_HomeMarketing")
+
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">Danh sách Sản phẩm</h1>
+        <p class="lead text-muted">
+            Các sản phẩm với chất lượng, uy tín, cam kết từ nhà Sản xuất, phân phối và bảo hành
+            chính hãng.
+        </p>
+    </div>
+</section>
+<div class="container">
+<div class="row">
+@foreach (products sanpham in ViewBag.DanhSachSanPham)
+{
+    <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+            <a href="/php/twig/frontend/sanpham/chitiet?sp_ma=1">
+                @if (String.IsNullOrEmpty(sanpham.image))
+                {
+                    <img class="bd-placeholder-img card-img-top" width="100%" height="350" src="~/Content/Images/no-photo.png" />
+
+                }
+                else
+                {
+                    <img class="bd-placeholder-img card-img-top" width="100%" height="350" src="~/UploadedFiles/ProductImages/@sanpham.image">
+                }
+             
+            </a>
+            <div class="card-body">
+                <a href="/php/twig/frontend/sanpham/chitiet?sp_ma=1">
+                    <h5>@sanpham.product_name</h5>
+                </a>
+                <h6>@sanpham.category</h6>
+                <p class="card-text">@sanpham.description</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <a class="btn btn-sm btn-outline-secondary" href="/php/twig/frontend/sanpham/chitiet?sp_ma=1">Xem chi tiết</a>
+                    </div>
+                    <small class="text-muted text-right">
+                        <b>@sanpham.standard_cost</b>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+</div>
+</div>

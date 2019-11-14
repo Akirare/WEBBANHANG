@@ -136,36 +136,45 @@
     <Compile Include="Controllers\PageController.cs" />
     <Compile Include="EFF\configs.cs">
       <DependentUpon>QuanLyBanHangEF.tt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="EFF\customers.cs">
       <DependentUpon>QuanLyBanHangEF.tt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="EFF\employees.cs">
       <DependentUpon>QuanLyBanHangEF.tt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="EFF\orders.cs">
       <DependentUpon>QuanLyBanHangEF.tt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="EFF\order_details.cs">
       <DependentUpon>QuanLyBanHangEF.tt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="EFF\products.cs">
       <DependentUpon>QuanLyBanHangEF.tt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="EFF\QuanLyBanHangEF.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyBanHangEF.Context.tt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="EFF\QuanLyBanHangEF.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyBanHangEF.tt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="EFF\QuanLyBanHangEF.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyBanHangEF.edmx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -173,9 +182,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\QuanLyBanHang.mdf" />
+    <Content Include="App_Data\QuanLyBanHang.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="App_Data\QuanLyBanHang_log.ldf">
       <DependentUpon>QuanLyBanHang.mdf</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -186,6 +198,7 @@
     <Content Include="Content\Images\icon-3.png" />
     <Content Include="Content\Images\marketing-1.png" />
     <Content Include="Content\Images\marketing-2.png" />
+    <Content Include="Content\Images\no-photo.png" />
     <Content Include="Content\Images\slider-1.jpg" />
     <Content Include="Content\Images\slider-2.jpg" />
     <Content Include="Content\Images\slider-3.jpg" />
@@ -195,11 +208,13 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>QuanLyBanHangEF.Context.cs</LastGenOutput>
       <DependentUpon>QuanLyBanHangEF.edmx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="EFF\QuanLyBanHangEF.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>QuanLyBanHangEF.edmx</DependentUpon>
       <LastGenOutput>QuanLyBanHangEF.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -210,9 +225,11 @@
     <EntityDeploy Include="EFF\QuanLyBanHangEF.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>QuanLyBanHangEF.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EntityDeploy>
     <Content Include="EFF\QuanLyBanHangEF.edmx.diagram">
       <DependentUpon>QuanLyBanHangEF.edmx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -225,6 +242,8 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="UploadedFiles\ProductImages\ipad4.png" />
+    <Content Include="UploadedFiles\samsung-galaxy-tab.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -256,7 +275,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
-    <Folder Include="UploadedFiles\" />
     <Folder Include="Views\File\" />
   </ItemGroup>
   <ItemGroup>
