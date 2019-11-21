@@ -40,10 +40,34 @@ namespace WebBanHang
                 url: "dang-nhap",
                 defaults: new { controller = "Page", action = "DangNhap" }
             );
+
+            routes.MapRoute(
+             name: "product.chitiet",
+             url: "sanpham-chitiet",
+             defaults: new { controller = "Product", action = "ProductDetail" }
+         );
+
+
             routes.MapRoute(
               name: "Page.chinh_sach",
               url: "chinh-sach",
               defaults: new { controller = "Page", action = "ChinhSach" }
+          );
+
+            //Route cho backend
+            routes.MapRoute(
+              name: "admin.page.dashboard",
+              url: "admin/dashboard",
+              defaults: new { controller = "Dashboard", action = "Index" },
+              namespaces : new string[] {"WebBanHang.Controllers.Backend"}
+          );
+
+            //Route trang san pham
+            routes.MapRoute(
+              name: "admin.products.index",
+              url: "admin/products",
+              defaults: new { controller = "Products", action = "Index" },
+              namespaces: new string[] { "WebBanHang.Controllers.Backend" }
           );
 
             routes.MapRoute(

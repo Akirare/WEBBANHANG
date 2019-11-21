@@ -1,0 +1,100 @@
+﻿@model IEnumerable<WebBanHang.EFF.products>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Backend/Dashboard/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", null, new { @class ="btn btn-primary"})
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.product_code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.product_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.standard_cost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.list_price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.target_level)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.reorder_level)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.minimum_reorder_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.quantity_per_unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.discontinued)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.image)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.product_code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.product_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.standard_cost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.list_price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.target_level)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.reorder_level)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.minimum_reorder_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.quantity_per_unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.discontinued)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.category)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.image)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>
