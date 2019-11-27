@@ -13,88 +13,98 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.product_code)
+          Ảnh đại diện
+        </th>
+
+        <th>
+            Mã Sản Phẩm
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.product_name)
+            Tên Sản Phẩm
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.description)
+           Chi tiết 
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.standard_cost)
+            Giá niêm yết
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.list_price)
+            List Price
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.target_level)
+           Target Level
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.reorder_level)
+           Reorder Level
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.minimum_reorder_quantity)
+            Minium Reorder Quantity
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.quantity_per_unit)
+         Quantity Per Unit
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.discontinued)
+            Discontinued
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.category)
+          Category
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.image)
-        </th>
+
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.product_code)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.product_name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.standard_cost)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.list_price)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.target_level)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.reorder_level)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.minimum_reorder_quantity)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.quantity_per_unit)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.discontinued)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.category)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.image)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id })
-        </td>
-    </tr>
+<tr>
+    <td>
+        @if (String.IsNullOrEmpty(item.image))
+        {
+            <img class="bd-placeholder-img card-img-top" width="100%" height="150" style="width:150px" src="~/Content/Images/no-photo.png">
+        }
+        else
+        {
+            <img class="bd-placeholder-img card-img-top" width="100%" height="150"  style="width:150px" src="~/UploadedFiles/ProductImages/@item.image">
+        }
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.product_code)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.product_name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.description)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.standard_cost)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.list_price)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.target_level)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.reorder_level)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.minimum_reorder_quantity)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.quantity_per_unit)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.discontinued)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.category)
+    </td>
+
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+        @Html.ActionLink("Details", "Details", new { id = item.id }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.id })
+    </td>
+</tr>
 }
 
 </table>

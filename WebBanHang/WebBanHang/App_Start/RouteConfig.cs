@@ -70,6 +70,25 @@ namespace WebBanHang
               namespaces: new string[] { "WebBanHang.Controllers.Backend" }
           );
 
+            //Route trang them moi san pham
+            // URL admin/produts/create
+            routes.MapRoute(
+              name: "admin.products.create",
+              url: "admin/products/create",
+              defaults: new { controller = "Products", action = "Create" },
+              namespaces: new string[] { "WebBanHang.Controllers.Backend" }
+          );
+            //Route trang Sua san pham
+            // URL admin/produts/edit/{id}
+            routes.MapRoute(
+             name: "admin.products.edit",
+             url: "admin/products/edit/{id}",
+             defaults: new { controller = "Products", action = "Edit"},
+             namespaces: new string[] { "WebBanHang.Controllers.Backend" }
+         );
+
+
+
             routes.MapRoute(
             name: "Account.dang_nhap",
             url: "dang-nhap",
