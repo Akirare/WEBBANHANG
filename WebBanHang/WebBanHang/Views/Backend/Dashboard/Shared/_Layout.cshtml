@@ -10,10 +10,10 @@
     </head>
 <body class="d-flex flex-column h-100">
     @Html.Partial("~/Views/Backend/Dashboard/Shared/_HeaderNavBar.cshtml")
-    
+
     <div class="container-fluid">
         <div class="row">
-             <!-- sidebar -->
+            <!-- sidebar -->
             @Html.Partial("~/Views/Backend/Dashboard/Shared/_Sidebar.cshtml")
             <!-- end sidebar -->
             <main role="main" class="col-md-10 ml-sm-auto px-4 mb-2">
@@ -26,6 +26,8 @@
     <!--End footer-->
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    <!--Thư viện SweetAlert2-->
+    <script src="~/Scripts/sweetalert2.all.min.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>

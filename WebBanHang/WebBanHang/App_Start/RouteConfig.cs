@@ -88,6 +88,52 @@ namespace WebBanHang
          );
 
 
+            //Route trang Xoa San Pham
+            // URL admin/produts/delete/{id}
+            routes.MapRoute(
+             name: "admin.products.delete",
+             url: "admin/products/delete/{id}",
+             defaults: new { controller = "Products", action = "Delete" },
+             namespaces: new string[] { "WebBanHang.Controllers.Backend" }
+         );
+
+            // Route dành cho API
+            // route api lấy danh sách sản phẩm
+            // URL: /api/products
+            routes.MapRoute(
+                name: "api.products",
+                url: "api/products",
+                defaults: new { controller = "Api", action = "GetProducts" }
+            );
+
+            // Route dành cho API
+            // route api xoá sản phẩm
+            // URL: /api/products/{id}/delete
+            routes.MapRoute(
+                name: "api.products.delete",
+                url: "api/products/{id}/delete",
+                defaults: new { controller = "Api", action = "Delete" , id = UrlParameter.Optional}
+            );
+
+
+            // Route dành cho API
+            // route api Thêm sản phẩm
+            // URL: /api/products/create
+            routes.MapRoute(
+                name: "api.products.create",
+                url: "api/products/create",
+                defaults: new { controller = "Api", action = "Create" }
+            );
+
+
+            // Route dành cho API
+            // route api sửa sản phẩm
+            // URL: /api/products/{id}/edit
+            routes.MapRoute(
+                name: "api.products.edit",
+                url: "api/products/{id}/edit",
+                defaults: new { controller = "Api", action = "Edit", id = UrlParameter.Optional }
+            );
 
             routes.MapRoute(
             name: "Account.dang_nhap",

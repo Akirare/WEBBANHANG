@@ -174,11 +174,12 @@ namespace WebBanHang.Controllers.Backend
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            
-            return View(products);
+            ViewBag.Product = products;
+            return View("~/Views/Backend/Products/Edit.cshtml", products);
         }
 
         // GET: Products/Delete/5
+
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -190,7 +191,8 @@ namespace WebBanHang.Controllers.Backend
             {
                 return HttpNotFound();
             }
-            return View(products);
+            ViewBag.Product = products;
+            return View("~/Views/Backend/Products/Delete.cshtml", products);
         }
 
         // POST: Products/Delete/5
