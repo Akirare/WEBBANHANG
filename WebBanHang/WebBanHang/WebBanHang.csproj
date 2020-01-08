@@ -246,6 +246,7 @@
       <DependentUpon>QuanLyBanHangEF.edmx</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -301,7 +302,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
+    <Folder Include="Test\" />
     <Folder Include="Views\Api\" />
+    <Folder Include="Views\Backend\Dashboard\OrderDetail\" />
     <Folder Include="Views\Dashboard\" />
     <Folder Include="Views\File\" />
   </ItemGroup>

@@ -33,7 +33,7 @@ namespace WebBanHang.Controllers.Backend
             {
                 return HttpNotFound();
             }
-            return View(products);
+            return View("~/Views/Backend/Products/Details.cshtml",products);
         }
 
         // GET: Products/Create

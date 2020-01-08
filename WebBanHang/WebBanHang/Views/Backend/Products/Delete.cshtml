@@ -118,8 +118,7 @@
 
     </dl>
 
-    @using (Html.BeginForm("Delete", "Products", FormMethod.Post, 
-        new { id = "form-delete-product", @class = "btn btn-danger" }))
+    @using (Html.BeginForm("Delete", "Products", FormMethod.Post, new { id = "form-delete-product", @class = "btn btn-danger" }))
     {
         @Html.AntiForgeryToken()
 
@@ -135,7 +134,6 @@
     $(document).ready(function () {
         $('#form-delete-product').submit(function (e) {
             e.preventDefault(); // Ngăn không cho gởi dữ liệu đến Server -> để mình tự xử lý
-
             // Sử dụng SweetAlert để hiển thị popup confirm
             Swal.fire({
                 title: 'Bạn có chắc chắn thực hiện thao tác này không?',
